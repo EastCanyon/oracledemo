@@ -492,6 +492,19 @@ HAVING count(*) >= 10;
 SELECT first_name
 FROM employees
 WHERE instr(first_name, 'e')=3;
+
+SELECT first_name
+FROM employees
+WHERE instr(first_name, 'e', 3, 1)=3;
+
+SELECT instr('korea', 'e', 2, 2)
+FROM dual; --0
+
+SELECT instr('koreae', 'e', 2, 2)
+FROM dual;
+
+SELECT * FROM employees;
+
 /*
  java                    oracle
  indexOf("e")            instr(first_name, 'e')
